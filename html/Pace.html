@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PACE DISTRICT | Meu Pace</title>
+    <link rel="stylesheet" href="../css/Pace.css">
+</head>
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="cabecalho">
+        <a href="Principal.html" class="logo">PACE DISTRICT</a>
+
+        <nav class="menu">
+            <a href="Principal.html">INÍCIO</a>
+            <a href="Calendario.html">CALENDÁRIO</a>
+            <a href="Pace.html" class="ativo">PACE</a>
+            <a href="Cultura.html">CULTURA</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- BANNER PRINCIPAL -->
+        <section class="banner">
+            <div class="banner-conteudo">
+                <span class="etiqueta">SUA JORNADA COMEÇA AQUI</span>
+
+                <h1>ENCONTRE<br>SEU RITMO.</h1>
+
+                <p>
+                    Registre seus treinos, acompanhe seu desempenho
+                    e descubra até onde você pode chegar.
+                </p>
+
+                <a href="#registrar" class="botao-principal">
+                    REGISTRAR CORRIDA
+                </a>
+            </div>
+        </section>
+
+        <!-- PAINEL -->
+        <section class="painel">
+
+            <div class="titulo-secao">
+                <span class="subtitulo">PACE DISTRICT / ATIVIDADES</span>
+                <h2>Seu espaço de corrida.</h2>
+                <p>
+                    Organize seus treinos e acompanhe sua evolução.
+                </p>
+            </div>
+
+            <!-- RESUMO DO DESEMPENHO -->
+            <div class="resumo">
+
+                <article class="card-resumo">
+                    <div class="icone">↗</div>
+                    <p>DISTÂNCIA TOTAL</p>
+                    <h3>15,0 <span>km</span></h3>
+                    <small>Exemplo de desempenho</small>
+                </article>
+
+                <article class="card-resumo destaque">
+                    <div class="icone">◷</div>
+                    <p>PACE MÉDIO</p>
+                    <h3>6:00 <span>min/km</span></h3>
+                    <small>Exemplo de ritmo</small>
+                </article>
+
+                <article class="card-resumo">
+                    <div class="icone">◎</div>
+                    <p>TEMPO CORRENDO</p>
+                    <h3>1h32 <span>min</span></h3>
+                    <small>Exemplo de duração</small>
+                </article>
+
+            </div>
+
+            <!-- REGISTRAR TREINO -->
+            <section class="registro" id="registrar">
+
+                <div class="registro-intro">
+                    <span class="subtitulo">NOVO TREINO</span>
+                    <h2>Registre sua corrida.</h2>
+                    <p>
+                        Preencha os dados abaixo para organizar
+                        as informações da sua atividade.
+                    </p>
+                </div>
+
+                <form action="#" method="get">
+
+                    <div class="campo">
+                        <label for="nome">Nome da atividade</label>
+                        <input
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            placeholder="Ex.: Corrida matinal"
+                            required
+                        >
+                    </div>
+
+                    <div class="campos-linha">
+
+                        <div class="campo">
+                            <label for="distancia">Distância (km)</label>
+                            <input
+                                type="number"
+                                id="distancia"
+                                name="distancia"
+                                placeholder="Ex.: 5"
+                                min="0.1"
+                                step="0.1"
+                                required
+                            >
+                        </div>
+
+                        <div class="campo">
+                            <label for="data">Data do treino</label>
+                            <input
+                                type="date"
+                                id="data"
+                                name="data"
+                                required
+                            >
+                        </div>
+
+                    </div>
+
+                    <div class="campos-linha">
+
+                        <div class="campo">
+                            <label for="tempo">Tempo (minutos)</label>
+                            <input
+                                type="number"
+                                id="tempo"
+                                name="tempo"
+                                placeholder="Ex.: 30"
+                                min="1"
+                                required
+                            >
+                        </div>
+
+                        <div class="campo">
+                            <label for="tipo">Tipo de atividade</label>
+                            <select id="tipo" name="tipo" required>
+                                <option value="">Selecione</option>
+                                <option value="corrida">Corrida</option>
+                                <option value="caminhada">Caminhada</option>
+                                <option value="treino">Treino de velocidade</option>
+                                <option value="longao">Longão</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="campo">
+                        <label for="observacoes">Observações</label>
+                        <textarea
+                            id="observacoes"
+                            name="observacoes"
+                            rows="3"
+                            placeholder="Como foi seu treino?"
+                        ></textarea>
+                    </div>
+
+                    <button type="submit" class="botao-enviar">
+                        ENVIAR REGISTRO →
+                    </button>
+
+                    <p class="aviso-formulario">
+                        Demonstração visual: os dados não serão
+                        calculados nem salvos em um histórico.
+                    </p>
+
+                </form>
+
+            </section>
+
+            <!-- HISTÓRICO ESTÁTICO -->
+            <section class="historico">
+
+                <div class="historico-topo">
+                    <div>
+                        <span class="subtitulo">SEUS TREINOS</span>
+                        <h2>Histórico de atividades.</h2>
+                    </div>
+                </div>
+
+                <article class="atividade">
+                    <div class="atividade-icone">🏃</div>
+
+                    <div class="atividade-info">
+                        <h3>Corrida matinal</h3>
+                        <p>Corrida · 5 km · 30 min</p>
+                        <small>Data ilustrativa</small>
+                    </div>
+
+                    <div class="atividade-pace">
+                        <strong>6:00</strong>
+                        <span>min/km</span>
+                    </div>
+                </article>
+
+                <article class="atividade">
+                    <div class="atividade-icone">🏃</div>
+
+                    <div class="atividade-info">
+                        <h3>Treino de resistência</h3>
+                        <p>Corrida · 10 km · 62 min</p>
+                        <small>Data ilustrativa</small>
+                    </div>
+
+                    <div class="atividade-pace">
+                        <strong>6:12</strong>
+                        <span>min/km</span>
+                    </div>
+                </article>
+
+                <article class="atividade">
+                    <div class="atividade-icone">🚶</div>
+
+                    <div class="atividade-info">
+                        <h3>Caminhada leve</h3>
+                        <p>Caminhada · 3 km · 36 min</p>
+                        <small>Data ilustrativa</small>
+                    </div>
+
+                    <div class="atividade-pace">
+                        <strong>12:00</strong>
+                        <span>min/km</span>
+                    </div>
+                </article>
+
+            </section>
+
+            <section class="dica">
+                <div>
+                    <span class="subtitulo">DICA PACE DISTRICT</span>
+                    <h2>O que é pace?</h2>
+                    <p>
+                        O pace representa o tempo que você leva para
+                        percorrer um quilômetro. Por exemplo, se você
+                        corre 5 km em 30 minutos, seu pace médio é
+                        de 6 minutos por quilômetro.
+                    </p>
+                </div>
+
+                <div class="dica-numero">
+                    <span>EXEMPLO</span>
+                    <strong>6:00</strong>
+                    <small>MIN / KM</small>
+                </div>
+            </section>
+
+        </section>
+
+    </main>
+
+    <footer class="rodape">
+        <a href="Principal.html" class="logo">PACE DISTRICT</a>
+        <p>Mais do que correr. Encontre seu ritmo.</p>
+        <small>© 2026 PACE DISTRICT · TODOS OS DIREITOS RESERVADOS</small>
+    </footer>
+
+</body>
+</html>

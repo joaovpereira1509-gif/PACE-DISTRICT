@@ -1,0 +1,279 @@
+.calendar-page {
+    min-height: 70vh;
+    padding: 65px 7%;
+    background: #f8f8f5;
+    color: #243757;
+}
+
+.calendar-intro {
+    margin-bottom: 40px;
+}
+
+.calendar-label {
+    color: #3A5F6F;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.calendar-intro h1 {
+    margin: 15px 0;
+    font-family: "Barlow Condensed", Impact, sans-serif;
+    font-size: clamp(38px, 6vw, 65px);
+    line-height: 1;
+    letter-spacing: -2px;
+}
+
+.calendar-description {
+    max-width: 550px;
+    color: #665E52;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* ÁREA DE CORRIDAS */
+
+.calendar-section {
+    margin-top: 50px;
+}
+
+.calendar-heading {
+    margin: 10px 0 25px;
+    font-family: "Barlow Condensed", Impact, sans-serif;
+    font-size: clamp(28px, 4vw, 42px);
+    line-height: 1.05;
+}
+
+/* NAVEGAÇÃO */
+
+.calendar-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 35px;
+}
+
+.filter-btn {
+    padding: 11px 20px;
+    border: 1px solid #DAD5B7;
+    color: #243757;
+    text-decoration: none;
+    font-size: 12px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.filter-btn:hover,
+.filter-btn:focus-visible {
+    background: #243757;
+    color: white;
+}
+
+/* GRADE */
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 20px;
+    scroll-margin-top: 110px;
+}
+
+/* CARTÕES */
+
+.race-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 280px;
+    padding: 25px;
+    background: white;
+    border: 1px solid #e9e6db;
+    transition: transform 0.2s, box-shadow 0.2s;
+    scroll-margin-top: 110px;
+}
+
+.race-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(36, 55, 87, 0.08);
+}
+
+.race-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.race-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    min-width: 65px;
+    height: 72px;
+    background: #DAD5B7;
+    color: #243757;
+}
+
+.race-date strong {
+    font-size: 27px;
+    line-height: 1.1;
+}
+
+.race-date span {
+    margin-top: 5px;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.race-distance-label {
+    padding: 8px 10px;
+    background: #f8f8f5;
+    color: #3A5F6F;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+/* INFORMAÇÕES */
+
+.race-category {
+    margin: 23px 0 8px;
+    color: #3A5F6F;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+.race-card h3 {
+    margin: 0 0 12px;
+    color: #243757;
+    font-size: 21px;
+    line-height: 1.4;
+}
+
+.race-location {
+    margin: 0;
+    color: #665E52;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* RODAPÉ DO CARTÃO */
+
+.race-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: auto;
+    padding-top: 25px;
+}
+
+.race-bottom span {
+    color: #243757;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.race-bottom a {
+    color: #243757;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid #3A5F6F;
+    padding-bottom: 4px;
+}
+
+.race-bottom a:hover,
+.race-bottom a:focus-visible {
+    color: #3A5F6F;
+}
+
+/* AVISO */
+
+.calendar-note {
+    margin-top: 20px;
+    padding: 15px 18px;
+    border-left: 3px solid #C2B79B;
+    background: #f1efe7;
+}
+
+.calendar-note p {
+    margin: 0;
+    color: #665E52;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+/* CHAMADA FINAL */
+
+.calendar-cta {
+    margin-top: 75px;
+    padding: 45px 35px;
+    background: #243757;
+    color: #DAD5B7;
+}
+
+.calendar-cta h2 {
+    max-width: 650px;
+    margin: 15px 0 25px;
+    font-family: "Barlow Condensed", Impact, sans-serif;
+    font-size: clamp(30px, 5vw, 52px);
+    line-height: 1;
+}
+
+.calendar-back-link {
+    display: inline-block;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #DAD5B7;
+    color: #DAD5B7;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.calendar-back-link:hover {
+    color: white;
+}
+
+/* TABLETS */
+
+@media (max-width: 950px) {
+    .calendar-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .calendar-page {
+        padding: 50px 5%;
+    }
+}
+
+/* CELULARES */
+
+@media (max-width: 600px) {
+    .calendar-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .calendar-page {
+        padding: 40px 20px;
+    }
+
+    .calendar-intro h1 {
+        letter-spacing: -1px;
+    }
+
+    .race-card {
+        min-height: 250px;
+    }
+
+    .calendar-cta {
+        padding: 35px 22px;
+    }
+
+    
+}

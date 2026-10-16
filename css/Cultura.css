@@ -1,0 +1,303 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #F3F2ED;
+    color: #243757;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.cabecalho {
+    min-height: 80px;
+    padding: 20px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    background: #243757;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 21px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+.menu a {
+    color: #DAD5B7;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.menu a:hover,
+.menu a.ativo {
+    color: white;
+}
+
+.menu a.ativo {
+    border-bottom: 2px solid #C2B79B;
+    padding-bottom: 8px;
+}
+
+.hero-cultura {
+    min-height: 470px;
+    padding: 85px 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    color: white;
+    background:
+        linear-gradient(90deg,
+            rgba(20, 36, 56, .97),
+            rgba(20, 36, 56, .65)),
+        url("../img/corrida-pessoas.jpg") center/cover;
+    background-color: #243757;
+}
+
+.hero-cultura > span,
+.subtitulo {
+    color: #8AAFA8;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 17px;
+}
+
+.hero-cultura h1 {
+    font-size: clamp(42px, 6vw, 68px);
+    line-height: 1;
+    margin-bottom: 22px;
+}
+
+.hero-cultura p {
+    max-width: 550px;
+    line-height: 1.8;
+    color: #E1E5E7;
+    margin-bottom: 28px;
+}
+
+.botao {
+    display: inline-block;
+    padding: 15px 22px;
+    background: #DAD5B7;
+    color: #243757;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: .3s;
+}
+
+.botao:hover {
+    background: white;
+    transform: translateY(-2px);
+}
+
+.conteudo {
+    max-width: 1250px;
+    margin: auto;
+    padding: 70px 30px;
+}
+
+.introducao {
+    max-width: 700px;
+    margin-bottom: 55px;
+}
+
+.introducao h2,
+.recordes h2,
+.desafio h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.introducao p,
+.descricao {
+    color: #665E52;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+.recordes {
+    margin-bottom: 60px;
+}
+
+.descricao {
+    margin-bottom: 22px;
+}
+
+.tabela-responsiva {
+    width: 100%;
+    overflow-x: auto;
+    background: white;
+    border: 1px solid #E4E1D7;
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    min-width: 760px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+thead {
+    background: #243757;
+    color: white;
+}
+
+th,
+td {
+    padding: 17px 15px;
+    border-bottom: 1px solid #E8E5DD;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+th {
+    font-size: 10px;
+    letter-spacing: .5px;
+}
+
+tbody tr:nth-child(even) {
+    background: #F8F7F2;
+}
+
+tbody tr:hover {
+    background: #E9E7DA;
+}
+
+td:first-child {
+    font-weight: bold;
+    color: #3A5F6F;
+}
+
+.nota {
+    color: #665E52;
+    font-size: 11px;
+    line-height: 1.7;
+    margin-top: 15px;
+}
+
+.desafio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding: 40px;
+    background: #243757;
+    color: white;
+    border-radius: 8px;
+}
+
+.desafio > div:first-child {
+    max-width: 650px;
+}
+
+.desafio p {
+    color: #DAD5B7;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+.acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.botao.secundario {
+    background: transparent;
+    color: white;
+    border: 1px solid #DAD5B7;
+}
+
+.botao.secundario:hover {
+    background: #3A5F6F;
+}
+
+.rodape {
+    padding: 45px 20px;
+    text-align: center;
+    background: #243757;
+    color: white;
+}
+
+.rodape .logo {
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.rodape p {
+    color: #DAD5B7;
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+
+.rodape small {
+    color: #AEB9C6;
+    font-size: 10px;
+}
+
+@media (max-width: 850px) {
+    .cabecalho {
+        flex-direction: column;
+    }
+
+    .menu {
+        justify-content: center;
+    }
+
+    .desafio {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-cultura {
+        padding: 65px 7%;
+    }
+
+    .conteudo {
+        padding: 45px 18px;
+    }
+
+    .introducao h2,
+    .recordes h2,
+    .desafio h2 {
+        font-size: 25px;
+    }
+
+    .desafio {
+        padding: 28px 22px;
+    }
+}

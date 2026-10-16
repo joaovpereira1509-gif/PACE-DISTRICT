@@ -1,0 +1,496 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #DAD5B7;
+    color: #243757;
+    line-height: 1.6;
+}
+
+/* =========================================
+   CABEÇALHO
+   ========================================= */
+
+.cabecalho {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    min-height: 110px;
+    padding: 15px 7%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+
+    background-color: #243757;
+}
+
+.cabecalho .logo {
+    color: #DAD5B7;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.25;
+    letter-spacing: 2px;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.cabecalho nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 28px;
+}
+
+.cabecalho nav a {
+    color: #DAD5B7;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.cabecalho nav a:hover {
+    color: #C2B79B;
+}
+
+/* =========================================
+   BANNER PRINCIPAL
+   ========================================= */
+
+.banner {
+    min-height: 480px;
+    padding: 70px 8%;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(36, 55, 87, 0.96),
+            rgba(36, 55, 87, 0.68)
+        ),
+        url("../img/biofisic.jpg") center / cover no-repeat;
+
+    color: #FFFFFF;
+}
+
+.banner-conteudo {
+    position: relative;
+    z-index: 1;
+    max-width: 750px;
+}
+
+.categoria {
+    color: #C2B79B;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.banner h1 {
+    color: #FFFFFF;
+    font-size: clamp(34px, 5vw, 58px);
+    line-height: 1.15;
+    margin-bottom: 22px;
+}
+
+.descricao {
+    max-width: 650px;
+    color: #F0EDE1;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* =========================================
+   BOTÕES
+   ========================================= */
+
+.botao-principal {
+    display: inline-block;
+    padding: 15px 28px;
+
+    background-color: #C2B79B;
+    color: #243757;
+
+    border: 2px solid #C2B79B;
+    border-radius: 5px;
+
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+.botao-principal:hover {
+    background-color: transparent;
+    color: #FFFFFF;
+    border-color: #DAD5B7;
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   TÍTULOS DAS SEÇÕES
+   ========================================= */
+
+.titulo-secao {
+    max-width: 750px;
+    margin-bottom: 35px;
+}
+
+.titulo-secao .categoria {
+    color: #3A5F6F;
+}
+
+.titulo-secao h2 {
+    color: #243757;
+    font-size: clamp(28px, 4vw, 38px);
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.titulo-secao > p:last-child {
+    color: #665E52;
+    font-size: 16px;
+}
+
+/* =========================================
+   INFORMAÇÕES DA CORRIDA
+   ========================================= */
+
+.informacoes {
+    padding: 75px 8%;
+    background-color: #DAD5B7;
+}
+
+.grade-informacoes {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.info-card {
+    padding: 30px 25px;
+    min-height: 190px;
+
+    background-color: #F8F6EE;
+    border-radius: 10px;
+    border-bottom: 4px solid #3A5F6F;
+
+    box-shadow: 0 5px 18px rgba(36, 55, 87, 0.08);
+
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(36, 55, 87, 0.14);
+}
+
+.icone {
+    display: inline-block;
+    color: #3A5F6F;
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.info-card h3 {
+    color: #243757;
+    font-size: 19px;
+    margin-bottom: 8px;
+}
+
+.info-card p {
+    color: #665E52;
+    font-size: 15px;
+}
+
+/* =========================================
+   PERCURSOS
+   ========================================= */
+
+.percursos {
+    padding: 75px 8%;
+    background-color: #F1EEE1;
+}
+
+.grade-percursos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.percurso-card {
+    position: relative;
+    overflow: hidden;
+
+    padding: 35px;
+    min-height: 250px;
+
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    border: 1px solid #C2B79B;
+
+    box-shadow: 0 5px 18px rgba(36, 55, 87, 0.07);
+
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.percurso-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(36, 55, 87, 0.13);
+}
+
+.percurso-card.destaque {
+    background-color: #243757;
+    border-color: #243757;
+}
+
+.numero {
+    display: block;
+    color: #3A5F6F;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.percurso-card.destaque .numero {
+    color: #C2B79B;
+}
+
+.percurso-card h3 {
+    color: #243757;
+    font-size: 45px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.percurso-card.destaque h3 {
+    color: #DAD5B7;
+}
+
+.percurso-card p {
+    color: #665E52;
+    font-size: 16px;
+}
+
+.percurso-card.destaque p {
+    color: #F0EDE1;
+}
+
+/* =========================================
+   INSCRIÇÃO
+   ========================================= */
+
+.inscricao {
+    padding: 75px 8%;
+    text-align: center;
+
+    background-color: #3A5F6F;
+    color: #FFFFFF;
+}
+
+.inscricao .categoria {
+    color: #DAD5B7;
+}
+
+.inscricao h2 {
+    color: #FFFFFF;
+    font-size: clamp(30px, 4vw, 42px);
+    margin-bottom: 15px;
+}
+
+.inscricao > p:not(.categoria):not(.aviso) {
+    max-width: 650px;
+    margin: 0 auto 25px;
+    color: #F0EDE1;
+    font-size: 17px;
+}
+
+.inscricao .botao-principal {
+    background-color: #DAD5B7;
+    border-color: #DAD5B7;
+    color: #243757;
+}
+
+.inscricao .botao-principal:hover {
+    background-color: transparent;
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+.aviso {
+    max-width: 650px;
+    margin: 25px auto 0;
+    color: #E5E0CE;
+    font-size: 13px;
+}
+
+/* =========================================
+   RODAPÉ
+   ========================================= */
+
+footer {
+    padding: 40px 8% 25px;
+    text-align: center;
+    background-color: #243757;
+    color: #DAD5B7;
+}
+
+footer .logo {
+    display: inline-block;
+    margin-bottom: 15px;
+
+    color: #DAD5B7;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+footer > p {
+    color: #DAD5B7;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+footer .voltar {
+    display: inline-block;
+    color: #DAD5B7;
+    text-decoration: none;
+    margin: 5px 0 20px;
+}
+
+footer .voltar:hover {
+    color: #FFFFFF;
+}
+
+footer .copyright {
+    padding-top: 20px;
+    margin-bottom: 0;
+    border-top: 1px solid rgba(218, 213, 183, 0.25);
+    font-size: 12px;
+}
+
+/* =========================================
+   TABLETS
+   ========================================= */
+
+@media (max-width: 900px) {
+    .cabecalho {
+        padding: 18px 5%;
+    }
+
+    .cabecalho .logo {
+        font-size: 25px;
+    }
+
+    .cabecalho nav {
+        gap: 15px;
+    }
+
+    .cabecalho nav a {
+        font-size: 13px;
+    }
+
+    .banner {
+        min-height: 420px;
+        padding: 60px 6%;
+    }
+
+    .informacoes,
+    .percursos,
+    .inscricao {
+        padding: 60px 6%;
+    }
+
+    .grade-informacoes {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* =========================================
+   CELULARES
+   ========================================= */
+
+@media (max-width: 600px) {
+    .cabecalho {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .cabecalho nav {
+        justify-content: flex-start;
+        gap: 12px 18px;
+    }
+
+    .cabecalho nav a {
+        font-size: 12px;
+    }
+
+    .banner {
+        min-height: 400px;
+        padding: 45px 22px;
+        background-position: center;
+    }
+
+    .banner h1 {
+        font-size: 34px;
+    }
+
+    .descricao {
+        font-size: 16px;
+    }
+
+    .informacoes,
+    .percursos,
+    .inscricao {
+        padding: 45px 20px;
+    }
+
+    .grade-informacoes,
+    .grade-percursos {
+        grid-template-columns: 1fr;
+    }
+
+    .info-card {
+        min-height: auto;
+        padding: 25px;
+    }
+
+    .percurso-card {
+        min-height: auto;
+        padding: 28px;
+    }
+
+    .botao-principal {
+        max-width: 100%;
+        padding: 14px 20px;
+    }
+
+    footer {
+        padding: 35px 20px 22px;
+    }
+}
